@@ -17,26 +17,26 @@ var Calculator = (function() {
     // Public methods
     return {
         add: function(numA, numB) {
-            paramA = numA;
-            paramB = numB;
+            paramA = parseInt(numA);
+            paramB = parseInt(numB);
 
             checkParams();
             
             return (paramA + paramB);
         },
         subtract: function(numA, numB) {
-            paramA = numA;
-            paramB = numB;
-
+            paramA = parseInt(numA);
+            paramB = parseInt(numB);
+            
             checkParams();
             
             return (paramA - paramB);
         },
         divide: function(numA, numB) {
           
-            paramA = numA;
-            paramB = numB;
-
+            paramA = parseInt(numA);
+            paramB = parseInt(numB);
+            
             checkParams();
             
             if (numB === 0) {
@@ -48,8 +48,8 @@ var Calculator = (function() {
         },
         multiply: function(numA, numB) {
             
-            paramA = numA;
-            paramB = numB;
+            paramA = parseInt(numA);
+            paramB = parseInt(numB);
 
             checkParams();
         
