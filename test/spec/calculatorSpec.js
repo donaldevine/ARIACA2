@@ -82,7 +82,7 @@ describe("Calculator", function() {
       //Arrange
       var numberA = 1;
       var numberB = 0;
-      var expected = "Division by zero error occured.";
+      var expected = "Division by zero error!";
 
       expect(function() {
         
