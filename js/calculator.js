@@ -1,14 +1,14 @@
 var Calculator = (function() {
 
     // Private methods
-    var checkParams(){
+    var checkParams = function(){
         if (isNaN(paramA)) {
-            throw new Error("Parameter A is not a number!")
-        };
+            throw new Error("Parameter A is not a number!");
+        }
         if (isNaN(paramB)) {
-            throw new Error("Parameter A is not a number!")
-        };
-    }
+            throw new Error("Parameter B is not a number!");
+        }
+    };
 
     // Private stuff up here
     var paramA = 0;
@@ -17,27 +17,25 @@ var Calculator = (function() {
     // Public methods
     return {
         add: function(numA, numB) {
-            this.paramA = numA;
-            this.paramB = numB;
+            paramA = numA;
+            paramB = numB;
 
             checkParams();
             
-            return (this.paramA + this.paramB);
+            return (paramA + paramB);
         },
-
         subtract: function(numA, numB) {
-            this.paramA = numA;
-            this.paramB = numB;
+            paramA = numA;
+            paramB = numB;
 
             checkParams();
             
-            return (this.paramA - this.paramB);
+            return (paramA - paramB);
         },
-
         divide: function(numA, numB) {
           
-            this.paramA = numA;
-            this.paramB = numB;
+            paramA = numA;
+            paramB = numB;
 
             checkParams();
             
@@ -45,19 +43,17 @@ var Calculator = (function() {
                 throw new Error("Division by zero error!");
             }
 
+            return (paramA / paramB);
 
-            return (this.paramA / this.paramB);
-
-        }
-
+        },
         multiply: function(numA, numB) {
             
-            this.paramA = numA;
-            this.paramB = numB;
+            paramA = numA;
+            paramB = numB;
 
             checkParams();
         
-            return (this.paramA * this.paramB);
+            return (paramA * paramB);
         }
-    }
-}())
+    };
+}());

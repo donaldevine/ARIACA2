@@ -22,12 +22,70 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <p>Calculator</p>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/calculator.js"></script>
+        <script src="js/vendor/skel.min.js"></script>
+
+
+        <div class="container">
+            <!-- Header -->
+                <div id="header" class="row">
+                    <div class="4u">
+                        <h1>Calculator</h1>
+                    </div>
+
+                </div>
+            <!-- Hero -->
+                <section id="hero">
+                    <button class="button" id="convertbutton">Do The Convert</button>
+                    <button class="button" id="clearbutton">Clear</button>
+                </section>
+            <!-- Features -->
+                <div class="row">
+                    <div class="-2u 4u">
+                        <h2>Number A</h2>
+                        <input class="" type="number" id="numA"/>
+                    </div>
+
+                    <div class="4u">
+                        <h2>Number B</h2>
+                        <input type="number" id="numB"/>
+                    </div>
+
+                    <div class="4u">
+                        <h2>Result</h2>
+                        <input type="number" id="result"/>
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="2u">
+                        <button id="addButton" onclick="add();">Add</button>
+                    </div>
+                    <div class="2u">
+                        <button id="addButton" onclick="subtract();">Subtract</button>
+                    </div>
+                    <div class="2u">
+                        <button id="addButton" onclick="divide();"> Divide</button>
+                    </div>
+                    <div class="2u">
+                        <button id="addButton" onclick="multiply();">Multiply</button>
+                    </div>
+                </div>
+
+            <!-- Footer -->
+                <div id="footer">
+                    &copy; Donal Devine. All rights reserved.
+                </div>
+        </div>
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -37,6 +95,10 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <script>
+            
         </script>
     </body>
 </html>

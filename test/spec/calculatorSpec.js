@@ -1,10 +1,4 @@
 describe("Calculator", function() {
-  var calculator;
-  
-  beforeEach(function() {
-    calculator = new Calculator();
-  });
-
 
   describe("When two numbers are added", function() {
     it("should return the sum", function() {
@@ -15,10 +9,10 @@ describe("Calculator", function() {
       var expected = 3;
 
       //Act
-      var result = calculator.add(numberA, numberB);
+      var result = Calculator.add(numberA, numberB);
 
       //Assert
-      expect(result).toEqual(3);
+      expect(result).toEqual(expected);
 
     });
   });
@@ -32,7 +26,7 @@ describe("Calculator", function() {
       var expected = -1;
 
       //Act
-      var result = calculator.subtract(numberA, numberB);
+      var result = Calculator.subtract(numberA, numberB);
 
       //Assert
       expect(result).toEqual(expected);
@@ -49,7 +43,7 @@ describe("Calculator", function() {
       var expected = 8;
 
       //Act
-      var result = calculator.multiply(numberA, numberB);
+      var result = Calculator.multiply(numberA, numberB);
 
       //Assert
       expect(result).toEqual(expected);
@@ -69,7 +63,7 @@ describe("Calculator", function() {
       var expected = 2;
 
       //Act
-      var result = calculator.divide(numberA, numberB);
+      var result = Calculator.divide(numberA, numberB);
 
       //Assert
       expect(result).toEqual(expected);
@@ -87,7 +81,7 @@ describe("Calculator", function() {
       expect(function() {
         
         //Act
-        var result = calculator.divide(numberA, numberB);
+        var result = Calculator.divide(numberA, numberB);
 
         //Assert        
       }).toThrowError(expected);
